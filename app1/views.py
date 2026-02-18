@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import book
+from .forms import BookForm
 # from django.http import HttpResponse
 
 
@@ -26,3 +27,9 @@ def contact(request):
 def viewbook(request):
     a=book.objects.all()
     return render(request,'viewbook.html',{"ab":a})
+def addbook(request):
+    a=BookForm(request.POST or None)
+    if a.is_valid():
+        a.save()
+        return redirect('viewbook')
+    return render(request,'addbook.html',{"abc":a})
