@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red; background-color: black; font-style: italic; text-align: center;">Hello world</h1>
+    {% for i in a%}      
+    <p>{{i}}</p>
+    {%endfor%}
+    <a href="{% url 'about'%}">about</a>
+    <a href="{% url 'contact'%}">contact</a>
+
+    
+</body>
+</html>
