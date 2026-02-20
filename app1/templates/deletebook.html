@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="background-color: red; text-align: center;">
+        Are you sure to delete{{abc.title}} by {{abc.author}}?</h2>
+
+    <form method="post">
+         {%csrf_token%}
+            <input type="submit" value="yes">
+
+        
+    </form>
+</body>
+</html>
