@@ -9,7 +9,8 @@ urlpatterns =  [
     path("viewbook/",views.viewbook,name='viewbook'),
     path("addbook/",views.addbook,name='addbook'),
     path("update/<int:id>",views.update_book,name='updatebook'),
-    path("delete/<int:id>",views.deletebook,name='deletebook')
+    path("delete/<int:id>",views.deletebook,name='deletebook'),
+    path("register/",views.register,name='register')
      
     
 ]
